@@ -24,11 +24,17 @@ const Button = ({
   return (
     <Comp
       data-slot='button'
+      role='button'
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
       {children}
-      {isLoading && <Spinner className='text-inherit' />}
+      {isLoading && (
+        <Spinner
+          role='status'
+          className='text-inherit'
+        />
+      )}
     </Comp>
   );
 };

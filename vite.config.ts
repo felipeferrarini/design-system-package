@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 /// <reference types="vite/client" />
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
@@ -11,7 +12,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     dts({
-      exclude: ['**/*.stories.tsx'],
+      exclude: ['**/*.stories.tsx', 'src/test', '**/*.test.tsx'],
       tsconfigPath: 'tsconfig.app.json',
     }),
   ],
@@ -34,6 +35,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+    },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+    css: true,
+    coverage: {
+      include: ['src/components'],
+      exclude: ['**/*.stories.tsx'],
     },
   },
 });
