@@ -1,8 +1,16 @@
 {
-  "name": "design-system-package",
-  "private": true,
+  "name": "@felipeferrarini/design-system-package",
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": "./dist/main.js",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -15,7 +23,8 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "vitest run && npm run build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -23,11 +32,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.542.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.12",
-    "vite-plugin-dts": "^4.5.4"
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
@@ -62,9 +67,12 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
   },
-  "overrides": {
-    "tinypool": "^2.x"
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19",
+    "tailwindcss": "^4"
   }
 }
