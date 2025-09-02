@@ -1,69 +1,121 @@
-# React + TypeScript + Vite
+<p align="center">
+   <img src="public/vite.svg" alt="Design System" width="120" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Design System Example
 
-Currently, two official plugins are available:
+<p align="center">
+   <b>A modern, reusable, and customizable design system built with React, TypeScript, and Vite.</b>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+<p align="center">
+   <a href="#tech-stack"><img src="https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Vite%20%7C%20Storybook%20%7C%20Bun-blue" alt="Tech Stack"/></a>
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React** – UI library for building components
+- **TypeScript** – Type-safe JavaScript
+- **Vite** – Lightning-fast build tool
+- **Storybook** – Component explorer and documentation
+- **Bun** – Modern JavaScript runtime (alternative to Node.js)
+- **ESLint & Prettier** – Code quality and formatting
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<p align="center">
+  <img src="public/vite.svg" alt="Design System" width="120" />
+</p>
+
+<h1 align="center">Design System Example</h1>
+
+<p align="center">
+  <b>A modern, reusable, and customizable design system built with React, TypeScript, and Vite.</b>
+</p>
+
+---
+
+## ✨ Overview
+
+This repository is an example project for building a scalable and maintainable design system. It provides a set of UI components, utilities, and configuration files to help you create consistent user interfaces across your applications.
+
+> **Note:** This project is open source and intended for learning, experimentation, and as a starting point for your own design system.
+
+## 📦 Features
+
+- **Reusable UI Components**: Button, Spinner, and more, built with accessibility and customization in mind.
+- **TypeScript Support**: Type-safe components and utilities.
+- **Storybook Integration**: Develop and preview components in isolation.
+- **Vite-Powered**: Fast development and build process.
+- **Prettier & ESLint**: Code formatting and linting for consistent code quality.
+
+## 🗂️ Project Structure
+
+```text
+design-system-package/
+├── .storybook/           # Storybook configuration
+├── public/               # Static assets
+├── src/
+│   ├── components/
+│   │   └── ui/
+│   │       ├── button/   # Button component
+│   │       └── spinner/  # Spinner component
+│   ├── lib/              # Shared utilities
+│   ├── index.css         # Global styles
+│   └── main.tsx          # App entry point
+├── package.json          # Project metadata and scripts
+├── vite.config.ts        # Vite configuration
+└── ...                   # Other config files
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Install dependencies**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```sh
+   bun install
+   # or
+   npm install
+   ```
+
+2. **Run Storybook**
+
+   ```sh
+   bun run storybook
+   # or
+   npm run storybook
+   ```
+
+3. **Start the Dev Server**
+   ```sh
+   bun run dev
+   # or
+   npm run dev
+   ```
+
+## 🧩 Components
+
+- **Button**: Customizable button with variants and accessibility support
+- **Spinner**: Loading spinner for async states
+
+Explore all components and their variants in Storybook!
+
+## 🛠️ Scripts
+
+| Script      | Description           |
+| ----------- | --------------------- |
+| `dev`       | Start Vite dev server |
+| `build`     | Build for production  |
+| `storybook` | Run Storybook         |
+| `lint`      | Run ESLint            |
+| `format`    | Run Prettier          |
+
+## 📚 Storybook
+
+Storybook is configured in the `.storybook/` directory. Run it locally to develop and preview components in isolation.
+
+## 📝 License
+
+MIT — free to use, modify, and share.
