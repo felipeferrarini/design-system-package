@@ -2,7 +2,7 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Button } from './button.component';
 
-describe('MyButton test:', () => {
+describe('Button test:', () => {
   afterEach(cleanup);
 
   it('should render component', () => {
