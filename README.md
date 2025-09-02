@@ -11,7 +11,7 @@
 ---
 
 <p align="center">
-   <a href="#tech-stack"><img src="https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Vite%20%7C%20Storybook%20%7C%20Bun%20%7C%20Tailwind%20CSS%20%7C%20shadcn--ui-blue" alt="Tech Stack"/></a>
+   <a href="#tech-stack"><img src="https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Vite%20%7C%20Storybook%20%7C%20Bun%20%7C%20Tailwind%20CSS%20%7C%20shadcn--ui%20%7C%20Vitest-blue" alt="Tech Stack"/></a>
 </p>
 
 ---
@@ -24,6 +24,7 @@
 - **Storybook** – Component explorer and documentation
 - **Tailwind CSS** – Utility-first CSS framework for rapid UI development
 - **shadcn/ui** – Beautifully designed, accessible React components built on top of Radix UI and Tailwind CSS
+- **Vitest** – Blazing fast unit testing framework
 - **Bun** – Modern JavaScript runtime (alternative to Node.js)
 - **ESLint & Prettier** – Code quality and formatting
 
@@ -43,7 +44,7 @@
 
 This repository is an example project for building a scalable and maintainable design system. It provides a set of UI components, utilities, and configuration files to help you create consistent user interfaces across your applications.
 
-It leverages **Tailwind CSS** for styling and **shadcn/ui** for ready-to-use, accessible React components, making it easy to build beautiful and consistent UIs.
+It leverages **Tailwind CSS** for styling, **shadcn/ui** for ready-to-use, accessible React components, and **Vitest** for fast and easy unit testing, making it easy to build, test, and maintain beautiful and consistent UIs.
 
 > **Note:** This project is open source and intended for learning, experimentation, and as a starting point for your own design system.
 
@@ -54,6 +55,7 @@ It leverages **Tailwind CSS** for styling and **shadcn/ui** for ready-to-use, ac
 - **Storybook Integration**: Develop and preview components in isolation.
 - **Vite-Powered**: Fast development and build process.
 - **Prettier & ESLint**: Code formatting and linting for consistent code quality.
+- **Vitest Support**: Write and run fast unit tests with Vitest.
 
 ## 🗂️ Project Structure
 
@@ -101,13 +103,14 @@ Explore all components and their variants in Storybook!
 
 ## 🛠️ Scripts
 
-| Script      | Description           |
-| ----------- | --------------------- |
-| `dev`       | Start Vite dev server |
-| `build`     | Build for production  |
-| `storybook` | Run Storybook         |
-| `lint`      | Run ESLint            |
-| `format`    | Run Prettier          |
+| Script      | Description                |
+| ----------- | -------------------------- |
+| `dev`       | Start Vite dev server      |
+| `build`     | Build for production       |
+| `storybook` | Run Storybook              |
+| `test`      | Run unit tests with Vitest |
+| `lint`      | Run ESLint                 |
+| `format`    | Run Prettier               |
 
 ## 📚 Storybook
 
